@@ -7,12 +7,14 @@ const dbcontext = require('./services/db.context');
 
 //Routes:
 const StoreRouter = require('./routes/store.route');
+const UserRouter = require('./routes/user.route');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 //Routing:
 app.use(StoreRouter);
+app.use(UserRouter);
 
 // Authentication:
 config.authenticate()
