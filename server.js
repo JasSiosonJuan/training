@@ -8,6 +8,7 @@ const dbcontext = require('./services/db.context');
 //Routes:
 const StoreRouter = require('./routes/store.route');
 const UserRouter = require('./routes/user.route');
+const ProductRouter = require('./routes/product.route');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 //Routing:
 app.use(StoreRouter);
 app.use(UserRouter);
+app.use(ProductRouter);
 
 // Authentication:
 config.authenticate()

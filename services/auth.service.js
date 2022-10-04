@@ -20,7 +20,7 @@ class AuthService extends Response {
     }
 
     // Verify:
-    async verifyToken (token) {
+    async verify (token) {
         try {
             if (token != null || token != undefined) {
                 var getToken = token.split(' ')[1];
